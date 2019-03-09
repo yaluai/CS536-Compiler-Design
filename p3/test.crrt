@@ -1,0 +1,22 @@
+int test(int a){s = "dd";}
+
+struct ss{ bool a;bool g;void h;};
+
+void sss(int a){if(k = true){int a;a = 5;}}
+
+bool dd(int i){i++;}
+
+int demo1(int z){if(k = true){int x;x = 33;}else{int y;y = 52;}}
+
+void demo(){if (b == -1) { x = 4+3*5-y; while (c) { y = y*2+x; } } else { x = 0; }}
+
+int x;
+int y;
+void foo(int x, int y, bool now){if(b==-1){while(c){y=y*2+x;}}else{x=0;}}
+void testAgain(){
+if(a==b){int x;}
+if(a>b){bool z;}
+if(a<b){five = 5;}
+if(a>=b){a = 8*9/2*2;}
+if(c>=b){z--;}
+}
