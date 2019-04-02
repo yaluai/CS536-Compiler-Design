@@ -1,0 +1,86 @@
+
+int x;
+bool y;
+
+struct Point2D {
+    int x;
+    bool y;
+};
+
+struct Point3D {
+    struct Point2D x;
+    int z;
+};
+
+struct Point3D pt2;
+struct Point3D pt3;
+
+int dist2d(int x1, bool y1, int x2, bool y2) {
+    struct Point2D pt1;
+    struct Point3D pt2;
+    int d;
+
+    pt1.x = x1;
+    pt1.y = y1;
+    pt2.x.x = x2;
+    pt2.x.y = y2;
+
+    d = pt2.z = -pt1.x + pt2.x.x;
+    x = d;
+    pt3.z = x;
+
+    return d * pt2.z + (pt1.y - pt2.x.y) * (pt2.x.y - pt1.y);
+}
+
+struct single {
+    int value;
+};
+
+struct double {
+    bool value1;
+    struct single value2;
+};
+
+int fib(int i) {
+    int fib;
+    if (i <= 0) {
+        struct single single;
+        single.value = 0;
+        fib = single.value;
+        if (i < 2) {
+            int fib;
+            fib = 1;
+            return fib != 0;
+        } else {
+            struct double single;
+            int a;
+            bool b;
+            single.value2.value = fib(i - 1, b, a > single.value1) + fib(i - 2, a / b);
+            return single.value2;
+        }
+    }
+    return fib;
+}
+
+void foo() {
+    int x;
+    struct Point3D pt;
+    cin >> pt.z;
+    cin >> x;
+    cout << pt.x.y && x;
+
+    while (pt != "what" || !pt.x) {
+        struct single x;
+        int foo;
+        x.value++;
+        pt.x.x--;
+        pt.x.x = !-x.value;
+        pt.x.y = (x.value == foo) && (pt.x.y > x.value) || (pt.x >= x);
+    }
+
+    repeat (x) {
+        struct single pt;
+        pt = foo(pt.value);
+        fib(dist2d(pt), pt(x));
+    }
+}

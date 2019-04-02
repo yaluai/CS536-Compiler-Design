@@ -1,0 +1,89 @@
+struct Foo {
+    int x;
+    bool y;
+    void x;
+};
+
+void foo(int x1, int y1, bool x1) {
+    void x1;
+    struct Foo z1; 
+    struct Hoge h;
+    struct foo i;
+    bool z1;
+    x2--;
+    baz.biz.qux++;
+    z1.d = none(z1.y + z1, h.y - x1.bark * z1.soap / o1.blah, -p);
+    z1.fp = o1 = -!qux;
+    return abc;
+}
+
+void foo;
+struct Baz foo;
+struct foo fos;
+
+struct Bar {
+    struct Foo foo;
+    int Bar;
+    struct Bar foo;
+};
+
+bool bar() {
+    struct Bar b;
+    if (b.Bar.pq != b._abc_ && b.foo.y.ro == rock) {
+        struct Bar b; // legal
+        int b;
+        bool c;
+        if (b.foo.x.pop >= c.t || c.aa.bb <= u) {
+            int g;
+            void g;
+            struct bar pok;
+            g.pot = pot;
+        } else {
+            bool c;
+            struct Pas c;
+            void g;
+            struct foo rock;
+            if (ijk = c) {
+            }
+        }
+    }
+    return xyz.pc > uv;
+    bar(1,2,3); // doesn't report error on mismatched arity
+}
+
+struct Bar {
+    bool k;
+};
+
+int foo(int os) {
+    bool x;
+    while (os.stub < ty.xx) {
+        int x;
+        struct Bar x;
+        void y;
+        struct bar pick;
+        struct Par picked;
+        x.k = x.Bar.u;
+        repeat (os.su > 17) {
+            bool x;
+            struct bar ros; 
+            struct Put puts;
+            void z;
+            struct Bar x;
+            struct Foo oo;
+            oo.y.x = x.p;
+        }
+        os(foo.x, oo);
+        foo("hello", true, false);
+        cin >> oo;
+        cout << oo.uv;
+    }
+}
+
+int Bar;
+struct foo {
+    void xyz; // doesn't process fields in duplicate struct definition
+};
+
+void Bar() {
+}
