@@ -1,0 +1,66 @@
+struct G {
+    int a;
+    bool b;
+};
+
+struct H {
+    int aab;
+    struct G p;
+    bool cool;
+};
+
+struct G p;
+struct H q;
+
+void baz() {
+    return;
+}
+
+bool bar(int n) {
+    return n > p.a || q.aab == q.p.a && !(q.cool != p.b);
+}
+
+int foo(int n, bool b) {
+    // cout
+    cout << n;
+    cout << q.p.a;
+    cout << 123 + p.a / n - q.aab * (-n);
+    cout << b;
+    cout << q.p.b;
+    cout << (n > p.a) && (!q.cool) || p.b == b;
+    cout << "hello";
+
+    // cin
+    cin >> n;
+    cin >> b;
+    cin >> q.aab;
+    cin >> q.p.b;
+
+    // call
+    bar(3 + n * q.aab - foo(q.p.a / n, true));
+    b = bar(q.aab / n + (-n) + q.p.a * n / 20);
+    baz();
+    foo(77 - 20 / (- - - - - - n), !!!!!!b);
+
+    // ++/--
+    q.p.a++;
+    n++;
+    q.aab--;
+    n--;
+
+    // return
+    return foo(30 * n / (-q.p.a), !b == bar(n - q.aab / 0));
+
+    if (false == ((n >= p.a) && (n != n + q.aab * 60 - q.p.a) || !true)) {
+        if (true || !false) {
+            b = n != 50 - q.p.a * (-n);
+        } else {
+        }
+
+        while (n <= foo(n - 100, true != (b == (n != q.p.a)))) {
+            repeat (n * q.aab + 30 / 17 - (-q.p.a) * 50) {
+                n = q.p.a = foo(q.p.a + n / 310 * q.aab - 0, !b);
+            }
+        }
+    }
+}

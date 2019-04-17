@@ -1,0 +1,339 @@
+
+struct G {
+    int a;
+    bool b;
+};
+
+struct H {
+    int aab;
+    struct G p;
+    bool cool;
+};
+
+struct G p;
+struct H q;
+
+bool baz() {
+}
+
+void bar(int a1) {
+    // return errors 2
+    return true;
+    return false;
+    return G;
+    return p;
+    return q.p;
+    return bar(1);
+    return baz();
+}
+
+
+int foo(int n, bool b) {
+
+    // cout errors
+    cout << bar;
+    cout << G;
+    cout << p;
+    cout << q.p;
+    cout << bar(1);
+
+    // cin errors
+    cin >> bar;
+    cin >> G;
+    cin >> p;
+    cin >> q.p;
+
+    // return errors
+    return;
+    return true;
+    return bar(3);
+    return G;
+    return p;
+    return q.p;
+    return baz();
+
+    // call errors
+    b(G);
+    n(p);
+    G(G);
+    p(q.p);
+    foo(true);
+    foo(true, 3, 4);
+    foo(true, foo(baz(), 7));
+    n = b(G);
+    n = n(p);
+    n = G(G);
+    n = p(q.p);
+    n = foo(true);
+    n = foo(true, 3, 4);
+    n = foo(true, foo(baz(), 7));
+
+    // assign errors
+    b = 1;
+    n = true;
+    n = G;
+    n = p;
+    n = q;
+    n = q.p;
+    foo = bar;
+    foo = G;
+    foo = p;
+    foo = q.p;
+    foo = b;
+    foo = n;
+    G = G;
+    G = p;
+    G = bar;
+    G = q.p;
+    G = b;
+    G = n;
+    p = p;
+    p = G;
+    p = bar;
+    p = q.p;
+    p = b;
+    p = n;
+    q.p = p;
+    q.p = G;
+    q.p = bar;
+    q.p = q.p;
+    q.p = b;
+    q.p = n;
+
+    // ++/-- errors
+    foo++;
+    G++;
+    p++;
+    q.p++;
+    b++;
+    foo--;
+    G--;
+    p--;
+    q.p--;
+    b--;
+
+    // arith errors
+    n = true + q.p;
+    n = foo + p;
+    n = G + true;
+    n = p + foo;
+    n = q.p + G;
+    n = true - q.p;
+    n = foo - p;
+    n = G - true;
+    n = p - foo;
+    n = q.p - G;
+    n = true * q.p;
+    n = foo * p;
+    n = G * true;
+    n = p * foo;
+    n = q.p * G;
+    n = true / q.p;
+    n = foo / p;
+    n = G / true;
+    n = p / foo;
+    n = q.p / G;
+    n = -true;
+    n = -foo;
+    n = -G;
+    n = -p;
+    n = -q.p;
+
+    // logic errors
+    b = 1 && foo;
+    b = G && q.p;
+    b = p && 1;
+    b = q.p && G;
+    b = foo && p;
+    b = 1 || foo;
+    b = G || q.p;
+    b = p || 1;
+    b = q.p || G;
+    b = foo || p;
+    b = !n;
+    b = !foo;
+    b = !G;
+    b = !p;
+    b = !q.p;
+
+    // relational errors
+    b = b > foo;
+    b = q.p > G;
+    b = foo > p;
+    b = G > b;
+    b = p > q.p;
+    b = b >= foo;
+    b = q.p >= G;
+    b = foo >= p;
+    b = G >= b;
+    b = p >= q.p;
+    b = b < foo;
+    b = q.p < G;
+    b = foo < p;
+    b = G < b;
+    b = p < q.p;
+    b = b <= foo;
+    b = q.p <= G;
+    b = foo <= p;
+    b = G <= b;
+    b = p <= q.p;
+
+    // equality errors
+    b = b == 1;
+    b = n == true;
+    b = n == G;
+    b = n == p;
+    b = n == q;
+    b = n == q.p;
+    b = foo == bar;
+    b = foo == G;
+    b = foo == p;
+    b = foo == q.p;
+    b = foo == b;
+    b = foo == n;
+    b = G == G;
+    b = G == p;
+    b = G == bar;
+    b = G == q.p;
+    b = G == b;
+    b = G == n;
+    b = p == p;
+    b = p == G;
+    b = p == bar;
+    b = p == q.p;
+    b = p == b;
+    b = p == n;
+    b = q.p == p;
+    b = q.p == G;
+    b = q.p == bar;
+    b = q.p == q.p;
+    b = q.p == b;
+    b = q.p == n;
+    b = b != 1;
+    b = n != true;
+    b = n != G;
+    b = n != p;
+    b = n != q;
+    b = n != q.p;
+    b = foo != bar;
+    b = foo != G;
+    b = foo != p;
+    b = foo != q.p;
+    b = foo != b;
+    b = foo != n;
+    b = G != G;
+    b = G != p;
+    b = G != bar;
+    b = G != q.p;
+    b = G != b;
+    b = G != n;
+    b = p != p;
+    b = p != G;
+    b = p != bar;
+    b = p != q.p;
+    b = p != b;
+    b = p != n;
+    b = q.p != p;
+    b = q.p != G;
+    b = q.p != bar;
+    b = q.p != q.p;
+    b = q.p != b;
+    b = q.p != n;
+
+    // if errors
+    if (n) { if (n) {} else {} }
+    if (G) { if (G) {} else {} }
+    if (p) { if (p) {} else {} }
+    if (q.p) { if (q.p) {} else {} }
+    if (bar(3)) { if (bar(3)) {} else {} }
+
+    // while errors
+    while (n) {}
+    while (G) {}
+    while (p) {}
+    while (q.p) {}
+    while (bar(3)) {}
+
+    // repeat errors
+    repeat (b) {}
+    repeat (G) {}
+    repeat (p) {}
+    repeat (q.p) {}
+    repeat (bar(3)) {}
+}
+
+int qux(int n, bool b) {
+    // preventing cascading errors
+
+    // cout
+    cout << G + foo;
+    cout << -true;
+    cout << 1 && G;
+    cout << !3;
+    cout << false > "afdf";
+    cout << foo != foo;
+    cout << true == foo;
+    cout << foo = foo;
+    cout << foo = 3;
+
+    // return
+    return true - p;
+    return -G;
+    return foo || q.p;
+    return !n;
+    return b >= foo;
+    return G == H;
+    return "afdf" != G;
+    return G = H;
+    return b = 3;
+
+    // if
+    if (G * foo) {}
+    if (-foo) {}
+    if (p && n) {}
+    if (!"abc") {}
+    if (bar(1) < b) {}
+    if (foo == foo) {}
+    if (q.p != false) {}
+    if (p = q.p) {}
+    if (G = foo) {}
+
+    // while
+    while (b / "123") {}
+    while (-"abc") {}
+    while ("abc" && 66) {}
+    while (!foo) {}
+    while (bar <= G) {}
+    while (bar(1) == bar(1)) {}
+    while (bar(1) != bar) {}
+    while (G = G) {}
+    while (n = H) {}
+
+    // repeat
+    repeat ("abc" / G) {}
+    repeat (-false) {}
+    repeat ("abc" && 66) {}
+    repeat (!bar(1)) {}
+    repeat (b <= foo) {}
+    repeat (G == G) {}
+    repeat (p != bar(1)) {}
+    repeat (foo = bar) {}
+    repeat (foo = bar(1)) {}
+
+}
+
+void biz(bool b, int n) {
+    // mixed
+    b = ("abc" * (31 && bar(1, 2, b()) || (bar(1) - n()))) + ((true < G) / bar(2) == b);
+
+    b = (true + 3) * 4;
+    n = true && (false || 3);
+    bar("f" * 4);
+    b = 1 + p;
+    n = true + 3 == bar(1);
+
+    b = true + "hello";
+    b = 1 + bar(true);
+    b = 1 + bar(1, 2);
+    return 3 + true;
+}
